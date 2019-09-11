@@ -5,3 +5,5 @@ Jinja2==2.10
 MarkupSafe==1.1.0
 Werkzeug==0.14.1
 xmlrunner==1.7.7
+pytest==5.1.2
+pytest-html==2.0.0

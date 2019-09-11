@@ -8,7 +8,23 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'python test.py'
+        sh ' pytest test.py --html=reports/reports.html'
+      }
+      post {
+        always{
+            script{
+                node(win_node){
+                    publishHTML (target: [
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll: true,
+                        reportDir: 'reports',
+                        reportFiles: 'reports.html',
+                        reportName: "HTML Report"
+                    ])
+                }
+            }
+        }
       }
     }
   }

@@ -1,0 +1,5 @@
+#ignore thses files
+.idea
+.pytest_cache
+.project
+.settings
