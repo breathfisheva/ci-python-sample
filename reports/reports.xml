@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="3" hostname="lucydeMacBook-Pro.local" name="pytest" skipped="0" tests="3" time="0.280" timestamp="2019-09-11T15:15:21.286335"><testcase classname="test.TestHello" file="test.py" line="9" name="test_hello" time="0.002"><failure message="AttributeError: &apos;TestHello&apos; object has no attribute &apos;app&apos;">self = &lt;test.TestHello object at 0x110f2c978&gt;
+
+    def test_hello(self):
+&gt;       rv = self.app.get(&apos;/&apos;)
+E       AttributeError: &apos;TestHello&apos; object has no attribute &apos;app&apos;
+
+test.py:11: AttributeError</failure></testcase><testcase classname="test.TestHello" file="test.py" line="14" name="test_hello_hello" time="0.001"><failure message="AttributeError: &apos;TestHello&apos; object has no attribute &apos;app&apos;">self = &lt;test.TestHello object at 0x110f2cd30&gt;
+
+    def test_hello_hello(self):
+&gt;       rv = self.app.get(&apos;/hello/&apos;)
+E       AttributeError: &apos;TestHello&apos; object has no attribute &apos;app&apos;
+
+test.py:16: AttributeError</failure></testcase><testcase classname="test.TestHello" file="test.py" line="19" name="test_hello_name" time="0.001"><failure message="AttributeError: &apos;TestHello&apos; object has no attribute &apos;app&apos;">self = &lt;test.TestHello object at 0x110f63630&gt;
+
+    def test_hello_name(self):
+        name = &apos;Simon&apos;
+&gt;       rv = self.app.get(f&apos;/hello/{name}&apos;)
+E       AttributeError: &apos;TestHello&apos; object has no attribute &apos;app&apos;
+
+test.py:22: AttributeError</failure></testcase></testsuite></testsuites>

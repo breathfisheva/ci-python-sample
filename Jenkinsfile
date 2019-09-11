@@ -8,22 +8,11 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh ' pytest test.py --html=reports/reports.html'
+        sh 'py.test test.py  --junitxml=reports/reports.xml'
       }
       post {
-        always{
-            script{
-                node(win_node){
-                    publishHTML (target: [
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: false,
-                        keepAll: true,
-                        reportDir: 'reports',
-                        reportFiles: 'reports.html',
-                        reportName: "HTML Report"
-                    ])
-                }
-            }
+        always {
+          junit 'reports/*.xml'
         }
       }
     }
