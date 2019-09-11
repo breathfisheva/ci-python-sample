@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import unittest
 import app
+import xmlrunner
 
 class TestHello(unittest.TestCase):
 
