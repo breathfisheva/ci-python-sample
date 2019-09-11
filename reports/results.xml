@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="1" name="pytest" skips="1" tests="2" time="0.097">
+    <testcase classname="tests.SimpleTest" name="test_fail" time="0.000301837921143">
+        <failure message="test failure">self = &lt;tests.SimpleTest testMethod=test_fail&gt;
+
+    def test_fail(self):
+&gt;       self.assertEqual(11, 7 + 3)
+E       AssertionError: 11 != 10
+
+tests.py:16: AssertionError</failure>
+    </testcase>
+    <testcase classname="tests.SimpleTest" name="test_pass" time="0.000109910964966"/>
+    <testcase classname="tests.SimpleTest" name="test_skipped" time="0.000164031982422">
+        <skipped message="demonstrating skipping" type="pytest.skip">/home/damien/test-env/lib/python2.6/site-packages/_pytest/unittest.py:119: Skipped: demonstrating skipping</skipped>
+    </testcase>
+</testsuite>
